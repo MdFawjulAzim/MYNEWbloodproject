@@ -1,0 +1,6 @@
+{
+    "rewrites": [
+      { "source": "/api/:path*", "destination": "http://oneblood.azimemil.xyz/api/:path*" }
+    ]
+  }
+  
