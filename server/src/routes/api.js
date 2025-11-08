@@ -13,8 +13,6 @@ const router = express.Router();
 
 // ----------------------------------------------------------------//
 
-// ----------------------------------------------------------------//
-
 // Registration API
 router.post('/registration', userControllers.register);
 // Login API
