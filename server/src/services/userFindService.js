@@ -1,5 +1,5 @@
 const userModel = require('../models/userModels');
-const profileModel = require('../models/profileModel');
+const profileModel = require('../models/donorDetailsModels');
 const mongoose = require('mongoose');
 
 

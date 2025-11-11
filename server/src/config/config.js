@@ -1,6 +1,6 @@
 const dotenv = require("dotenv");
 
-// কনফিগ ফাইল লোড করা
+
 dotenv.config({ path: ".env" });
 
 module.exports.PORT = process.env.PORT || 2020;
@@ -11,11 +11,11 @@ module.exports.JWT_KEY = process.env.JWT;
 module.exports.JWT_EXPIRE_TIME = 30 * 24 * 60 * 60;
 
 //Email Credentials Rohan
-module.exports.EMAIL_HOST = "smtp.gmail.com"; // ✅ ঠিক করা হয়েছে
-module.exports.EMAIL_PORT = 587; // ✅ TLS এর জন্য সঠিক পোর্ট
-module.exports.EMAIL_SECURITY = false; // ✅ TLS হলে false হবে
+module.exports.EMAIL_HOST = "smtp.gmail.com";
+module.exports.EMAIL_PORT = 587;
+module.exports.EMAIL_SECURITY = false; 
 module.exports.EMAIL_USER = "armanhossain0175019@gmail.com";
-module.exports.EMAIL_PASSWORD = "clwe spne uqjd qgtl"; // ✅ সাধারণ পাসওয়ার্ড ব্যবহার করা যাবে না
+module.exports.EMAIL_PASSWORD = "clwe spne uqjd qgtl";
 module.exports.EMAIL_UN_AUTH = true;
 
 //Email Credentials Azim

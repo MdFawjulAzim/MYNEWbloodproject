@@ -1,19 +1,19 @@
 const jwt = require("jsonwebtoken");
-const {JWT_EXPIRE_TIME, JWT_KEY} = require('../config/config');
+const { JWT_EXPIRE_TIME, JWT_KEY } = require("../config/config");
 
-
-const TokenEncode = (numbers, user_id) => {
-    const Key = JWT_KEY;
-    const EXPIRE = {expiresIn: JWT_EXPIRE_TIME}
-    const PAYLOAD = {numbers: numbers, user_id: user_id}
-    return jwt.sign(PAYLOAD, Key, EXPIRE)
-}
+// subject can be email or phone
+const TokenEncode = (subject, user_id, role) => {
+  const Key = JWT_KEY;
+  const EXPIRE = { expiresIn: JWT_EXPIRE_TIME };
+  const PAYLOAD = { sub: subject, user_id, role };
+  return jwt.sign(PAYLOAD, Key, EXPIRE);
+};
 
 const TokenDecode = (token) => {
-    try {
-        return jwt.verify(token, JWT_KEY)
-    } catch (e) {
-        return null
-    }
-}
-module.exports = {TokenDecode, TokenEncode}
+  try {
+    return jwt.verify(token, JWT_KEY);
+  } catch (e) {
+    return null;
+  }
+};
+module.exports = { TokenDecode, TokenEncode };
